@@ -1,0 +1,40 @@
+﻿Repetitionsfrågor
+
+1. Vad innebär det att instantiera en typ?
+Att instantiera en typ innebär att man skapar en objekt/instance av samma typ. Man kan instantiera typ som finns i .NET t.ex. integer, char eller double, man kan instatiera en typ som finns i BCL (Base Class Library), t.ex. System.DateTime, man kan instatiera en typ som man har själv skapat t.ex. en array, class.
+
+2. En instans av en typ kan även kallas något annat, vad?
+en instans = en objekt
+
+3. C# skiljer på värdetyper och referenstyper. Placera följande typer i rätt kategori: int, string, bool, double, object, char
+värdetyper: int, bool, double, char
+referenstyper: string, object
+Värdetyper är enkla typer som ligger på stacken. De ligger lagrade direkt i variabeln. Man behöver inte skriva ord new när man skapar dem. 
+t.ex.
+int p = 3;
+int a = p;
+int p = 5;
+Int a har fortfarande värde 3.
+
+Deras värde ligger på heapen och på stacken finns bara deras referens som peckar på rätt plats på heapen. När man skapar instans av referenstyper måste man använda "new" (undantag string) för att allokera/boka plats i minnet på heapen.  Vi måste göra detta när vi skapar t.ex. ny instans av vår klass. T.ex. vi har skapat class Person.
+Person p = new Person("Anna");
+Person q = p;
+p.ChangeName("Tina");
+Person q har värde "Tina" för att p och q har samma minnesreferens. Objektet har inte kopierats. Bara referensen. Varje gång vi ändrar värdet på p ändrats det också på q.
+
+
+4. Att skapa program i C# handlar ytterst sett om att definiera egna datatyper, som i sin tur använder andra typer. Nämn ett par olika sorters datatyper som kan skapas, både referenstyper och värdetyper.
+Vi kan själva skapa följande datatyper:
+class, struct, array, enum, delegate, interface, 
+
+5. Vad innebär stack och heap för ett C#-program?
+Stacken är en del av minnet i datorn som knyts till programmet. På stacken lagras dta som är av enkla typer (t.ex. int, double, char, bool) - värdetyper. Här gäller LIFO - Last In, First Out. Här används metoder push och pop.
+Heapen är en del av minnet där speciella stycken av data placeras - referenstyper. Minne allokeras till datat och avallokeras då det inte längre behövs. Programmet kan allockera minne på heapen, men kan inte avallockera det. Avallockeringen sköts automatiskt av skräpinsamlaren (GC - garbage collector).
+
+6. Vad är en variabel? Hur skapas en variabel? Vad innebär det att initiera en variabel? Vad menas med att tilldela en variabel ett värde?
+I en variabel kan vi spara data för att använda dem senare. Variabler innehåller data som vi kan sedan ändra. 
+I C# finns en mängd fördefinierade variabeltyper.
+Först måste en variabel deklareras (man deklarerar vilken sorts typ av variabel man vill använda för att kompilatorn ska förstå sorts data den lagrar), t.ex. int tal;
+Att initiera en variabel betyder att tilldela den ett värde, t.ex. tal = 7;
+Man kan deklarera och initiera variabel samtidigt: int tal = 7;
+

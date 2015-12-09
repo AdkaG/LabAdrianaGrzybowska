@@ -1,0 +1,55 @@
+﻿Repetitionsfrågor
+
+1. Vad står CLR för, och vad används den till?
+CLR - Common Language Runtime är en virtuell maskin som tolkas och utförs CIL-filen. 
+I .NET skriver vi källkod som sen kompileras till CIL (Common Intermediate Language). CIL-filen (.exe och .dll) är ettor och nollor men inte en maskinkod. När programmet startas, kompileras det ytterligare en gång till maskinkod för just det system man använder. Då CIL-filen tolkas och utförs av interpretatorn - en virtuell maskin som i .NET kallas CLR. Koden och programmen som skapas på detta sätt är platformoberoende. Det räcker att man har en interpretator som tolkar CIL på det datorsystem man använder för att kuna köra programmet. Samlingsnamn för CIL och CLR är CLI (Common Language Infrastruktur). CLR översätter bara detta som behövs, även bara en klass.
+
+2. Vad är BCL?
+BCL - Base Class Library innehåller det mest grundläggande för .NET, t.ex. klasser som erbjuder en del vanliga funktioner. Programmerare kan använda dem utan att skriva dessa funktioner själv. 
+
+3. Vad innebär det att kompilera källkod?
+Att kompilera källkod betyder att ändra den från detta som vi hade skrivit till maskikod, som dator kan läsa (nollor och ettor).
+
+4. Den första kompileringen av källkod genererar en assembly i CIL-format. Vad står CIL för?
+Common Language Infrastruktur är en specifiaktion som beskriver programmiljö som tillåter flera språk att användas på olika datorplatformar. Man behöver inte skriva olika program för olika arkitektur.
+
+5. Vad kallas den andra kompileringen, dvs den som tar en assembly på CIL-format och omvandlar till maskinkod? Här bör du känna till både förkortning och vad den står för. När sker denna kompilering normalt?
+JIT - just in time, som betyder att då kompileras bara kod som behövs, även om det är bara en klass. Koden kompileras till riktig maskin kod.
+
+6. Nämn en fördel och en nackdel med att .NET-program körs i en runtime-miljö.
+Fördel - Man kan flytta kod till en annan dator.
+Nackdel - En förkompilerad kod går betydligt snabbare än ett skriptspråk men inte lika snabbt som om det vore binär kod.
+
+
+Repetitionsfrågor
+
+1. Vad är en identifierare?
+En identifierare är ett namn på en variabel, klass eller metod. 
+
+2. Hur får en identifierare se ut?
+Man får inte använda nyckelord som identifierare. Det kan vara ett ord eller om vi använder mer än ett ord kan vi skriva dem som camel- eller pascal-case.
+
+3. Vad är camel case och pascal case?
+camelCase: myCar, numbersArray, startPosition
+PascalCase: GetMyNumber, NumberOfFruits
+
+4. Vad är nyckelord?
+Nyckelord är ett ord som man bör inte använda när man döper sina variabler, klasser osv. Dessa ord har speciall betydelse kompilatorn. 
+
+5. Vad innebär det att C# är case sensitive?
+Till C# är a och A annorlunda tecken och t.ex. myBoat och MyBoat är inte samma sak.
+
+6. Kompilatorn struntar i s.k. whitespace, men för tydlighetens skulle bör alltid källkod formatteras för maximal läsbarhet. Nämn ett par olika typer av whitespace.
+space, enter, tab, new line
+
+7. Vilket tecken används för att avsluta ("terminera") ett uttryck?
+;
+
+8. Flera uttryck kan grupperas tillsammans till ett s.k. block, t.ex. för att utföras tillsammans om ett villkor är uppfyllt. Hur grupperas uttryck?
+{}
+
+9. När bör källkod kommenteras? Vilka olika kommentarstyper finns, och hur anges de?
+Om det är inte självklart vad koden gör. Men man skulle använda först identifierare som beskriver vad koden gör. Documentation comments behöver vi för att bygga documentation för vårt program.
+single-line comments //
+delimited comments /* */
+documantation comments ///<summary> ... </summary>
