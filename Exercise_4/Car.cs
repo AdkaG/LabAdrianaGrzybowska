@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Exercise_4
 {
-    class Car
+    public class Car
     {
         string mark;
         int numberOfGears;
@@ -65,6 +66,16 @@ namespace Exercise_4
                     throw new Exception("Wrong value. Only 'cupe' och 'combi'.");
                 typ = value;
             }
+        }
+
+        public virtual void Drive()
+        {
+            Console.WriteLine("brum brum");
+        }
+
+        public static explicit operator SUV(Car car)
+        {
+           return new SUV();
         }
         public override string ToString() => $"Mark: {Mark}, Number of Gears: {NumberOfGears}, Color: {Color}, Typ {Typ};";
         

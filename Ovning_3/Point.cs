@@ -6,10 +6,24 @@ using System.Threading.Tasks;
 
 namespace Ovning_3
 {
-    class Point
+    public class Point
     {
         int x;
         int y;
+
+        public int X
+        {
+            get { return x; }
+            set { x = value; }
+        }
+
+        public int Y
+        {
+            get { return y; }
+            set { y = value; }
+        }
+
+
         public int GetX()
         {
             return x;
@@ -25,6 +39,17 @@ namespace Ovning_3
         public void SetY(int y)
         {
             this.y = y;
+        }
+
+        public Point()
+        {
+            
+        }
+
+        public Point(int x, int y)
+        {
+            X = x;
+            Y = y;
         }
         public override string ToString() => $"pointX: {GetX()}, pointY: {GetY()}";
     }
