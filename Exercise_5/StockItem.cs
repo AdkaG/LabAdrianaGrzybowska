@@ -10,62 +10,42 @@ namespace Exercise_5
     {
         int id;
         string name;
-        static int stockCount;
+        int stockCount;
+
 
         public int Id
         {
-            get
-            {
-                return id;
-            }
-
+            get { return id; }
             set
             {
+                if(value > 0)
                 id = value;
             }
         }
+
         public string Name
         {
-            get
-            {
-                return name;
-            }
+            get { return name; }
+            set { name = value; }
+        }
 
+        public int StockCount
+        {
+            get { return stockCount; }
             set
             {
-                name = value;
-            }
-        }
-        public static int StockCount
-        {
-            get
-            {
-                return stockCount;
-            }
-
-            private set
-            {
+                if(value > 0)
                 stockCount = value;
             }
         }
 
-        static StockItem()
-        {
-            stockCount = 0;
-        }
-        public StockItem()
-        {
-            StockCount++;
-        }
-        public StockItem(int id, string name) : this()
+        protected StockItem(int id, string name, int stockCount)
         {
             Id = id;
             Name = name;
+            StockCount = stockCount;
         }
 
-        public override string ToString() => $"Id: {Id}, Name: {Name}";
-       
-
-        
+        public override string ToString() => $"Id: {Id}, Name: {Name}, StockCout: {StockCount}";
     }
 }

@@ -6,16 +6,13 @@ using System.Threading.Tasks;
 
 namespace Exercise_5
 {
-    class Plate : StockItem
+    class Plate: StockItem
     {
         string type;
+
         public string Type
         {
-            get
-            {
-                return type;
-            }
-
+            get { return type; }
             set
             {
                 if (value == "flat" || value == "deep")
@@ -24,10 +21,12 @@ namespace Exercise_5
                     throw new Exception("Wrong value");
             }
         }
-        public Plate(int id, string name, string type) : base(id, name)
+
+        public Plate(int id, string name, int stockCount, string type) : base(id, name, stockCount)
         {
             Type = type;
         }
+
         public override string ToString() => $" {base.ToString()}, Type: {Type}";
     }
 }

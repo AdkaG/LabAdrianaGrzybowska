@@ -6,20 +6,19 @@ using System.Threading.Tasks;
 
 namespace Exercise_5
 {
-    class Stock 
+    class Stock
     {
-       StockItem[] stockItems;
+        StockItem[] stockItems;
 
         public StockItem this[int index]
         {
-            get
-            {
-                return stockItems[index];
-            }
-            private set
-            {
-                stockItems[index] = value;
-            }
+            get { return stockItems[index]; }
+            private set { stockItems[index] = value; }
+        }
+
+        public int StockItemLength
+        {
+            get { return stockItems.Length; }
         }
 
         public Stock()
@@ -27,6 +26,7 @@ namespace Exercise_5
             stockItems = new StockItem[0];
         }
 
+       
         public void AddItem(StockItem item)
         {
             StockItem[] newStock = new StockItem[stockItems.Length + 1];
@@ -37,41 +37,19 @@ namespace Exercise_5
             newStock[newStock.Length - 1] = item;
             stockItems = newStock;
         }
+
         public StockItem GetItem(int itemId)
         {
-            foreach (StockItem element in stockItems)
+            foreach (var element in stockItems)
             {
                 if (element.Id == itemId)
                 {
                     return element;
                 }
-              
             }
-            throw new Exception("Nothing");
+            throw new Exception($"Nothing with id : {itemId}");
         }
+    }
 
-    }
-    class Uczniowie
-    {
-        string[] grupa;
-        public Uczniowie(int iloscDzieciWGrupie)
-        {
-            grupa = new string[iloscDzieciWGrupie];
-        }
-        public string this[int index]
-        {
-            get { return grupa[index]; }
-            set
-            {
-                grupa[index] = value;
-            }
-        }
-        public void WyswietlDzieciZGrupy()
-        {
-            foreach (string x in grupa)
-            {
-                Console.WriteLine(x);
-            }
-        }
-    }
 }
+
