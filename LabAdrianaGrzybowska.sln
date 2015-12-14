@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseWithButtonClass", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arv_Abstract_Is_As", "Arv_Abstract_Is_As\Arv_Abstract_Is_As.csproj", "{964C1B32-18DB-47DB-AAEA-BE25CF1B976C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise_6", "Exercise_6\Exercise_6.csproj", "{C9523F78-881E-4F21-A14A-D5FBD987C7FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{964C1B32-18DB-47DB-AAEA-BE25CF1B976C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{964C1B32-18DB-47DB-AAEA-BE25CF1B976C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{964C1B32-18DB-47DB-AAEA-BE25CF1B976C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9523F78-881E-4F21-A14A-D5FBD987C7FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9523F78-881E-4F21-A14A-D5FBD987C7FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9523F78-881E-4F21-A14A-D5FBD987C7FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9523F78-881E-4F21-A14A-D5FBD987C7FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
