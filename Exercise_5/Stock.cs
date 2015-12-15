@@ -13,7 +13,7 @@ namespace Exercise_5
         public StockItem this[int index]
         {
             get { return stockItems[index]; }
-            private set { stockItems[index] = value; }
+            //3private set { stockItems[index] = value; }
         }
 
         public int StockItemLength
